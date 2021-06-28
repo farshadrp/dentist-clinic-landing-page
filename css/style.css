@@ -1,0 +1,1224 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: poppins, sans-serif;
+  color: #09215d;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.hero-color {
+  background-color: #f3fbff;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?ky2azh");
+  src: url("../fonts/icomoon.eot?ky2azh#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?ky2azh") format("truetype"),
+    url("../fonts/icomoon.woff?ky2azh") format("woff"),
+    url("../fonts/icomoon.svg?ky2azh#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-square:before {
+  content: "\e907";
+}
+
+.icon-check .path1:before {
+  content: "\e905";
+  color: rgb(218, 238, 255);
+}
+.icon-check .path2:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(0, 120, 255);
+}
+.icon-caries:before {
+  content: "\e900";
+}
+.icon-cleaning:before {
+  content: "\e901";
+}
+.icon-dental-implant:before {
+  content: "\e902";
+}
+.icon-tooth:before {
+  content: "\e903";
+}
+.icon-toothbrush:before {
+  content: "\e904";
+}
+
+/*================================================
+            Preloader
+================================================*/
+#preloader {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+#status {
+  background-image: url("../images/preloader.gif");
+  background-repeat: no-repeat;
+  width: 70px;
+  height: 70px;
+}
+
+/* ==============================
+    Navbar = logo - links - cta btn
+   ============================== */
+
+.navbar {
+  padding: 20px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-logo {
+  color: #0078ff;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav-logo > span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.nav-logo > i {
+  margin-right: 5px;
+  font-size: 2.3rem;
+}
+
+.nav-links {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hamberger-menu {
+  font-size: 2rem;
+  display: none;
+}
+
+.menu > li > a {
+  color: #09215d;
+  transition: 0.5s;
+}
+
+.menu > li {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu li > a:hover {
+  color: #0078ff;
+}
+
+.nav-cta {
+  background: transparent;
+  border: #0078ff solid 1px;
+  padding: 5px 20px;
+  color: #0078ff;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  margin-left: 30px;
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.nav-cta:hover {
+  background: #0078ff;
+  color: #ffffff;
+}
+
+/* ==============================
+    hero = hero content - hero image
+   ============================== */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.hero-content {
+  margin: auto 0;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-content > h1 {
+  text-transform: capitalize;
+  font-size: 3.8rem;
+}
+
+.hero-content > p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin: 2rem 0;
+  max-width: 95%;
+}
+
+.main-cta-btn {
+  background: #0078ff;
+  border: #0078ff solid 1px;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  transition: 0.5s;
+  font-weight: 500;
+}
+
+.main-cta-btn:hover {
+  background: transparent;
+  color: #0078ff;
+}
+
+.hero-img {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-img img {
+  height: 530px;
+  display: block;
+}
+
+/* ==============================
+    hero comment
+   ============================== */
+
+.hero-comment {
+  position: absolute;
+  background-color: #ffffff;
+  left: -140px;
+  bottom: -30px;
+  border-radius: 20px;
+  box-shadow: 0 1px 50px rgba(58, 58, 58, 0.22);
+}
+
+.stars {
+  padding: 20px 0 0 20px;
+}
+
+.stars i {
+  color: #fddb2c;
+  font-size: 1.5rem;
+}
+
+.comment {
+  padding: 0px 20px 20px 20px;
+}
+
+.comment > p {
+  font-size: 1.3rem;
+  font-style: italic;
+  width: 250px;
+  margin-top: 10px;
+}
+
+.comment > h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.quote {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #09215d;
+  position: absolute;
+  top: -25px;
+  left: 73%;
+  box-shadow: 0 1px 70px rgba(20, 28, 92, 0.281);
+}
+
+.quote > i {
+  font-size: 2.2rem;
+  color: #ffffff;
+  position: absolute;
+  left: calc(50% - 10px);
+  top: calc(50% - 10px);
+}
+
+.comment-date {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* ==============================
+    about us = image - content
+   ============================== */
+
+.section-space {
+  margin-top: 13rem;
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.about-us-img {
+  width: 49%;
+  position: relative;
+}
+
+.about-us-img > img {
+  display: block;
+  width: 95%;
+}
+
+.about-us-content {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto 0;
+}
+
+.section-title > h3 {
+  margin-bottom: 20px;
+  color: #0078ff;
+  font-size: 1.8rem;
+}
+
+.section-title > h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  width: 85%;
+}
+
+.about-us-content > p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: justify;
+  width: 95%;
+}
+
+.about-us-content > a {
+  margin-top: 30px;
+}
+
+/* ==============================
+    services = icons and cta
+  ============================== */
+
+#services {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-section-title > h3 {
+  margin-bottom: 20px;
+  color: #0078ff;
+  font-size: 1.8rem;
+}
+
+.center-section-title > h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.service-icons {
+  display: flex;
+}
+
+.service-box {
+  margin: 30px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-icon {
+  width: 165px;
+  height: 150px;
+  border: 1px solid #e7dbdb;
+  border-radius: 60px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-icon > div {
+  font-size: 7rem;
+}
+
+.service-box > h4 {
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.service-box:hover .box-icon {
+  background-color: #0078ff;
+}
+
+.service-box:hover h4 {
+  color: #0078ff;
+}
+
+.service-box:hover div {
+  color: #ffffff;
+}
+
+#services > a {
+  margin-top: 40px;
+}
+
+/* ==============================
+    Patient = image and name
+  ============================== */
+
+.patient-name-img {
+  display: flex;
+  justify-content: space-between;
+}
+
+.patient-box {
+  width: 22.5%;
+}
+
+.patient-img {
+  width: 100%;
+  height: 370px;
+}
+
+.persen-1 {
+  background: url(../images/patient-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -270px 0;
+}
+
+.persen-2 {
+  background: url(../images/patient-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -125px 0;
+}
+
+.persen-3 {
+  background: url(../images/patient-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -195px 0;
+}
+
+.persen-4 {
+  background: url(../images/patient-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.img-top {
+  border-radius: 75px 0 0 0;
+}
+
+.img-down {
+  border-radius: 0 0 75px 0;
+}
+
+.patient-box > h3 {
+  font-size: 1.7rem;
+}
+
+.title-top > h3 {
+  padding-top: 30px;
+}
+
+.patient-box:nth-child(odd) h3 {
+  padding-top: 15px;
+}
+
+.patient-box:nth-child(even) h3 {
+  padding-bottom: 15px;
+}
+
+/* ==============================
+    pricing = boxes and features
+  ============================== */
+
+.price-box {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  align-items: center;
+}
+
+.box-cart {
+  border: #e7dbdb solid 1px;
+  width: 31%;
+  border-radius: 15px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-cart:nth-child(2) {
+  width: 33%;
+  height: 510px;
+  padding: 50px 20px;
+}
+
+.box-cart h4 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.box-cart p {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.price-features {
+  display: flex;
+  justify-self: flex-start;
+}
+
+.price-features > span {
+  font-size: 2rem;
+  margin-right: 8px;
+}
+
+.box-cart hr {
+  display: inline-block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.box-cart a {
+  background: transparent;
+  border: #0078ff solid 2px;
+  padding: 12px 80px;
+  color: #0078ff;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  transition: 0.5s;
+  font-weight: 500;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.box-cart:hover {
+  border: #e7dbdb solid 1px;
+  background-color: #0078ff;
+  color: #ffffff;
+}
+
+.box-cart:hover a {
+  background-color: #ffffff;
+}
+
+.line {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+.line h3 {
+  position: relative;
+  z-index: 5;
+  font-size: 2.8rem;
+  padding-left: 5px;
+}
+.line h3 span {
+  font-size: 1.5rem;
+}
+.line-child::after {
+  content: "";
+  width: 102%;
+  height: 15px;
+  background-color: #fddb2c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 15px;
+}
+.line-child {
+  position: relative;
+}
+
+/* ==============================
+    Testimonials
+   ============================== */
+
+.testimonial-bgc {
+  width: 100%;
+  background-color: #f3fbff;
+  height: auto;
+}
+
+.testimonial-bgc .center-section-title h3 {
+  margin-top: 10rem;
+}
+
+.patient-word {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.patient-comment {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 1px 50px rgba(58, 58, 58, 0.22);
+  width: 28%;
+  margin-bottom: 100px;
+}
+
+.stars {
+  padding: 20px 0 0 20px;
+}
+
+.stars i {
+  color: #fddb2c;
+  font-size: 1.5rem;
+}
+
+.word {
+  padding: 0px 20px 20px 20px;
+}
+
+.word > p {
+  font-size: 1.3rem;
+  font-style: italic;
+  width: 250px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: justify;
+}
+
+.word > h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.comment-date {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.about-us-content a {
+  font-size: 1.5rem;
+}
+
+/* ==============================
+    Footer
+   ============================== */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  color: #0078ff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-logo i {
+  margin-right: 15px;
+}
+
+footer ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+footer ul li:hover:nth-child(odd) {
+  color: #0078ff;
+}
+footer hr {
+  width: 100%;
+  background-color: #fdebeb71;
+  margin: 20px 0;
+}
+
+footer p {
+  font-weight: 300;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.line2::after {
+  content: "\007C";
+  cursor: default;
+}
+
+/* ==============================
+    Meida Queries
+   ============================== */
+
+/* ==============================
+    1024px
+   ============================== */
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 8.5px;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+
+  .section-space {
+    margin-top: 10rem;
+  }
+  /* header */
+  .hero-comment {
+    left: -30px;
+    bottom: -30px;
+  }
+
+  /* Services */
+  .service-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .service-box {
+    width: 17.5%;
+  }
+
+  .service-box > h4 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+  }
+
+  .box-icon {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #e7dbdb;
+    border-radius: 60px 0 60px 0;
+    position: relative;
+  }
+
+  /* Patient */
+  .patient-name-img {
+    justify-content: space-evenly;
+  }
+
+  /* Pricing */
+  .price-box {
+    justify-content: space-evenly;
+  }
+
+  .box-cart {
+    width: 30%;
+  }
+
+  .box-cart:nth-child(2) {
+    width: 30%;
+    height: 450px;
+    padding: 30px 20px;
+  }
+
+  .box-cart a {
+    padding: 12px 50px;
+  }
+
+  /* Testimonial */
+
+  .testimonial-bgc .center-section-title h3 {
+    margin-top: 9rem;
+  }
+}
+
+/* ==============================
+    768px
+   ============================== */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+
+  .container {
+    max-width: 700px;
+  }
+
+  .section-space {
+    margin-top: 9rem;
+  }
+
+  .center-section-title > h2 {
+    margin-bottom: 0;
+  }
+
+  /* header */
+  .hero-comment {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 3.1rem;
+  }
+
+  .navbar > a {
+    display: none;
+  }
+
+  .hero-img img {
+    width: 300px;
+    height: auto;
+  }
+
+  .main-cta-btn {
+    padding: 7px 10px;
+  }
+
+  /* About us */
+  .about-us-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+
+  .about-us-content h3 {
+    margin-bottom: 10px;
+  }
+
+  /* Services */
+  .section-title > h2 {
+    font-size: 2.8rem;
+  }
+
+  .service-box {
+    width: 17%;
+  }
+
+  .box-icon {
+    width: 125px;
+    height: 120px;
+    border: 1px solid #e7dbdb;
+    border-radius: 40px 0 40px 0;
+    position: relative;
+  }
+
+  /* Patient */
+  #patients div h2 {
+    margin-bottom: 30px;
+  }
+
+  .patient-name-img {
+    justify-content: space-evenly;
+  }
+
+  .patient-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .persen-1 {
+    background: url(../images/patient-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -220px 0;
+  }
+
+  .persen-2 {
+    background: url(../images/patient-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -95px 0;
+  }
+
+  .persen-3 {
+    background: url(../images/patient-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -185px 0;
+  }
+
+  /* Pricing */
+  .box-cart:nth-child(2) {
+    height: 440px;
+    padding: 30px 20px;
+  }
+
+  .box-cart a {
+    padding: 8px 30px;
+  }
+
+  /* Testimonial */
+  .patient-word {
+    margin-top: 40px;
+  }
+
+  .testimonial-bgc .center-section-title h3 {
+    margin-top: 8rem;
+  }
+}
+
+/* ==============================
+    425px
+   ============================== */
+
+@media (max-width: 425px) {
+  html {
+    font-size: 8px;
+  }
+
+  .container {
+    max-width: 400px;
+  }
+
+  .section-space {
+    margin-top: 7rem;
+  }
+
+  /* header */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-logo {
+    color: #0078ff;
+    cursor: pointer;
+    margin-right: 0;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .menu > li:last-child {
+    margin-right: 0px;
+  }
+
+  .menu li:nth-child(4),
+  .menu li:nth-child(5),
+  .hero-comment,
+  .navbar > a {
+    display: none;
+  }
+
+  .menu > li {
+    font-size: 1.3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-img img {
+    width: 250px;
+    height: auto;
+  }
+
+  .hero-content {
+    z-index: 100;
+  }
+
+  .hero-content p {
+    font-weight: 500;
+  }
+
+  .main-cta-btn {
+    padding: 7px 10px;
+  }
+
+  .main-cta-btn {
+    margin-bottom: 30px;
+  }
+
+  /* About us */
+  .about-us {
+    flex-direction: column-reverse;
+  }
+
+  .about-us-img,
+  .about-us-content {
+    width: 100%;
+  }
+
+  .about-us-content {
+    margin-bottom: 40px;
+  }
+
+  .about-us-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+  }
+
+  .about-us-content h3 {
+    margin-bottom: 10px;
+  }
+
+  .section-title > h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Services */
+  .center-section-title h2 {
+    font-size: 2.2rem;
+  }
+  .service-box {
+    width: 25%;
+  }
+
+  .box-icon {
+    width: 105px;
+    height: 100px;
+    border: 1px solid #e7dbdb;
+    border-radius: 40px 0 40px 0;
+    position: relative;
+  }
+
+  /* Patient */
+  #patients div h2 {
+    margin-bottom: 30px;
+  }
+
+  .patient-name-img {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .patient-box {
+    width: 35%;
+  }
+
+  .patient-img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .persen-1 {
+    background: url(../images/patient-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -180px 0;
+  }
+
+  .persen-2 {
+    background: url(../images/patient-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -75px 0;
+  }
+
+  .persen-3 {
+    background: url(../images/patient-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -160px 0;
+  }
+
+  /* Pricing */
+  .box-cart:nth-child(2) {
+    width: 80%;
+  }
+  .price-box {
+    flex-wrap: wrap;
+    margin-bottom: 8rem;
+  }
+  .box-cart {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .box-cart:last-child {
+    margin-bottom: 0;
+  }
+  .box-cart a {
+    padding: 12px 30px;
+  }
+
+  /* Testimonials */
+
+  .testimonial-bgc .center-section-title h3 {
+    margin-top: 8rem;
+  }
+  .patient-word {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .patient-comment {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .patient-comment:last-child {
+    margin-bottom: 8rem;
+  }
+
+  /* contanct us */
+  #contact .about-us-img {
+    margin-bottom: 6rem;
+  }
+
+  footer > hr {
+    width: 90%;
+  }
+}
+
+/* ==============================
+    375px
+   ============================== */
+
+@media (max-width: 375px) {
+  html {
+    font-size: 7px;
+  }
+
+  .container {
+    max-width: 370px;
+  }
+
+  .section-space {
+    margin-top: 7rem;
+  }
+  .hero-img img {
+    width: 200px;
+    height: auto;
+    transform: translateX(8px);
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .main-cta-btn {
+    margin-bottom: 30px;
+  }
+}
+
+/* ==============================
+    320px
+   ============================== */
+
+@media (max-width: 320px) {
+  html {
+    font-size: 7px;
+  }
+
+  .section-space {
+    margin-top: 7rem;
+  }
+  .hero-img img {
+    width: 170px;
+    height: auto;
+    /* transform: translateX(8px); */
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .main-cta-btn {
+    margin-bottom: 30px;
+  }
+
+  /* Services */
+  .center-section-title h2 {
+    font-size: 2.2rem;
+  }
+  .service-box {
+    width: 25%;
+  }
+
+  .box-icon {
+    width: 95px;
+    height: 90px;
+    border: 1px solid #e7dbdb;
+    border-radius: 30px 0 30px 0;
+    position: relative;
+  }
+
+  .about-us-content > a {
+    margin-bottom: 0;
+  }
+
+  .main-cta-btn {
+    margin-bottom: 0;
+  }
+
+  .testimonial-bgc .center-section-title h3 {
+    margin-top: 6rem;
+  }
+
+  .price-box {
+    margin-bottom: 6rem;
+  }
+
+  #contact .about-us-content {
+    margin-bottom: 0;
+  }
+}
